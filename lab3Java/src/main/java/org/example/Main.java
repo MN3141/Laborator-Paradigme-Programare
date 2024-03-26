@@ -9,5 +9,7 @@ public class Main {
         for(int i=0;i<=14;i++) {
             tab.add((int)(Math.random() * 10 + 1));
             System.out.println(tab.get(i));}
+        System.out.println(tab);
     }
+
 }
