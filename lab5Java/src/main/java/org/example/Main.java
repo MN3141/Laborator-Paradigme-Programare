@@ -27,18 +27,16 @@ public class Main {
         int size=fileBuffer.size();
         for(int i=0;i<size;i++)
         {
-            for(int j=0;j<size;j++)
-            {
-                String temp=fileBuffer.get(j);
-                if(!wordList.containsKey(temp))
-                    wordList.put(temp,1);
-                else {
-                    int counter=wordList.get(temp);
-                    counter++;
-                    wordList.replace(temp,counter);
-                }
-            }
+            String temp=fileBuffer.get(i);
+           if(wordList.containsKey(temp))
+           {
+               int counter=wordList.get(temp);
+               counter++;
+               wordList.replace(temp,counter);
+           }
+           else wordList.replace(temp,1);
         }
-
+        String temp=wordList.toString();
+        System.out.println(temp);
     }
 }
