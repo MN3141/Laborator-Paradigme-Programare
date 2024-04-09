@@ -7,4 +7,4 @@ class AdvancedCalculator(basic_calculator.BasicCalculator):
 
     def sqr(self):
         self.value = self.value ** 0.5
-    
+        return self
