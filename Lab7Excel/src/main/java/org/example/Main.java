@@ -32,7 +32,7 @@ public class Main {
             // Create Workbook instance holding reference to
             // .xlsx file
             XSSFWorkbook workbook = new XSSFWorkbook(file);
-
+            FormulaEvaluator evaluator = workbook.getCreationHelper().createFormulaEvaluator();
             // Get first/desired sheet from the workbook
             XSSFSheet sheet = workbook.getSheetAt(0);
 
@@ -70,6 +70,10 @@ public class Main {
                                     cell.getStringCellValue()
                                             + "\t");
                             break;
+
+                        case FORMULA:
+                           // System.out.println(cell.getCellFormula()+"\t"); afisare formula
+                            System.out.println(cell.getNumericCellValue());
                     }
                 }
 
