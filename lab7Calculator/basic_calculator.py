@@ -11,6 +11,7 @@ class BasicCalculator:
     def substract(self, number):
         self.value = self.value - number
         return self
+
     def multiply(self, number):
         self.value = self.value * number
         return self
