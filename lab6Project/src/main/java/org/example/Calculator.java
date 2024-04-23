@@ -21,6 +21,7 @@ public class Calculator {
 
     public void divide(float x) {
         if (x != 0) this.value /= x;
+        else this.value=-12345;
     }
 
     public float getValue() {
